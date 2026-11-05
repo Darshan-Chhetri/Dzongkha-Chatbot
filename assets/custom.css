@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Jomolhari&display=swap");
+
+:root {
+    --ink: #202a35;
+    --muted-ink: #73808d;
+    --accent: #374151;
+    --accent-hover: #1f2937;
+    --page: #f5f7f8;
+    --surface: #ffffff;
+    --border: #e7ebee;
+}
+
+body {
+    background: var(--page);
+}
+
+.gradio-container {
+    max-width: 900px !important;
+    color: var(--ink);
+    font-family: "Segoe UI", Arial, sans-serif !important;
+}
+
+.gradio-container * {
+    font-family: "Segoe UI", Arial, sans-serif !important;
+}
+
+.gradio-container h1 {
+    margin: 1.8rem 0 0.35rem !important;
+    color: var(--ink);
+    font-size: clamp(1.6rem, 4vw, 2rem) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.04em;
+    text-align: left;
+}
+
+.gradio-container p {
+    color: var(--muted-ink);
+    line-height: 1.6;
+}
+
+.gradio-container .wrap:has(.chatbot) {
+    padding: clamp(0.75rem, 2.5vw, 1.5rem);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--surface);
+    box-shadow: 0 12px 36px rgba(27, 39, 51, 0.06);
+}
+
+.chatbot {
+    border: 0 !important;
+    border-radius: 14px !important;
+    background: #f8fafb !important;
+}
+
+.message {
+    max-width: 88%;
+    margin-block: 0.45rem !important;
+    padding: 0.7rem 0.95rem !important;
+    border-radius: 14px !important;
+    line-height: 1.7 !important;
+}
+
+.message.user {
+    border: 1px solid #e1e5e9 !important;
+    background: #f1f3f5 !important;
+}
+
+.message.bot {
+    border: 1px solid var(--border) !important;
+    background: var(--surface) !important;
+    box-shadow: none !important;
+}
+
+.message-text {
+    font-family: "Jomolhari", "Noto Serif Tibetan", serif !important;
+    font-size: 1.15rem !important;
+    line-height: 1.9 !important;
+}
+
+.gradio-container textarea {
+    min-height: 52px !important;
+    border: 1px solid #dfe5e8 !important;
+    border-radius: 14px !important;
+    background: var(--surface) !important;
+    line-height: 1.6 !important;
+    box-shadow: none !important;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.gradio-container textarea:focus {
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 0 3px rgba(55, 65, 81, 0.12) !important;
+}
+
+.gradio-container button {
+    border-radius: 11px !important;
+    transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.gradio-container button:hover {
+    transform: translateY(-1px);
+}
+
+.gradio-container button.primary {
+    border-color: var(--accent) !important;
+    background: var(--accent) !important;
+    color: #fff !important;
+}
+
+.gradio-container button.primary:hover {
+    border-color: var(--accent-hover) !important;
+    background: var(--accent-hover) !important;
+}
+
+.gradio-container .examples button {
+    border: 1px solid var(--border) !important;
+    background: var(--surface) !important;
+    color: #4b5966 !important;
+}
+
+.gradio-container .examples button:hover {
+    border-color: #cfd5dc !important;
+    background: #f7f8f9 !important;
+}
+
+.gradio-container footer {
+    color: var(--muted-ink);
+}
+
+@media (max-width: 640px) {
+    .gradio-container {
+        padding: 0.5rem !important;
+    }
+
+    .gradio-container h1 {
+        margin-top: 1rem !important;
+    }
+
+    .gradio-container .wrap:has(.chatbot) {
+        padding: 0.7rem;
+        border-radius: 16px;
+    }
+
+    .message-text {
+        font-size: 1.08rem !important;
+    }
+
+    .message {
+        max-width: 96%;
+        padding: 0.65rem 0.8rem !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
